@@ -1,0 +1,16 @@
+<h1>URL Shortener</h1>
+
+<div class="input-form-wrapper">
+  <form action="/shorten" method="post" class="input-form">
+    <input
+      type="text"
+      name="fullUrl"
+      id="full-url"
+      placeholder="URL"
+      value="{{fullUrl}}"
+    />
+    <button type="submit">Shorten</button>
+    <p>{{msg}}</p>
+    <p>{{shortUrl}}</p>
+  </form>
+</div>
