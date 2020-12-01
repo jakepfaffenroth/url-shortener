@@ -1,16 +1,19 @@
-<h1>URL Shortener</h1>
+<div id="wrapper">
+  <h1 id="site-title">URL Shortener</h1>
 
-<div class="input-form-wrapper">
-  <form action="/shorten" method="post" class="input-form">
+  <form action="/shorten" method="post" id="input-form">
     <input
       type="text"
       name="fullUrl"
-      id="full-url"
-      placeholder="URL"
+      id="url-input"
+      placeholder="https://www.duckduckgo.com"
+      required
       value="{{fullUrl}}"
     />
-    <button type="submit">Shorten</button>
-    <p>{{msg}}</p>
-    <p>{{shortUrl}}</p>
+    <button id="submit-btn" type="submit">Shorten</button>
   </form>
+  <div id="msg-wrapper">
+    <p id="msg">{{msg}}</p>
+    <p id="short-url">{{shortUrl}}</p>
+  </div>
 </div>

@@ -3,13 +3,12 @@ const router = express.Router();
 
 const shortener = require('../shortener');
 
-/* GET home page. */
 router.get('/', function (req, res) {
-  res.render('index', { title: 'Express' });
+  res.render('index');
 });
 
 router.post('/shorten', shortener.make);
 
-router.get('/:shortUrl', shortener.retrieve)
+router.get('/:url', shortener.retrieve);
 
 module.exports = router;
